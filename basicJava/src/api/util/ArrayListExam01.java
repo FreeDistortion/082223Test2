@@ -25,21 +25,21 @@ public class ArrayListExam01 {
 				System.out.print(data+"(홀수), ");
 			}
 		}
-//		int j=arrList.size();
-//		for (int i = 0; i < j-1; i++) {
-//			int tempNum = arrList.get(i);
-//			if (tempNum % 2 == 0) {
-//				System.out.print(tempNum + "(짝수), ");
-//			}else{
-//				System.out.print(tempNum + "(홀수), ");
-//			}
-//		}
-//		int tempNum=arrList.get((arrList.size()-1));
-//		if (tempNum % 2 == 0) {
-//			System.out.print(tempNum + "(짝수)");
-//		}else{
-//			System.out.print(tempNum + "(홀수)");
-//		}
+		int j=arrList.size();
+		for (int i = 0; i < j-1; i++) {
+			int tempNum = arrList.get(i);
+			if (tempNum % 2 == 0) {
+				System.out.print(tempNum + "(짝수), ");
+			}else{
+				System.out.print(tempNum + "(홀수), ");
+			}
+		}
+		int tempNum=arrList.get((arrList.size()-1));
+		if (tempNum % 2 == 0) {
+			System.out.print(tempNum + "(짝수)");
+		}else{
+			System.out.print(tempNum + "(홀수)");
+		}
 		
 	}
 
