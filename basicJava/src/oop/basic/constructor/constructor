@@ -1,0 +1,30 @@
+"생성자"
+객체가 생성될 떄 한 번 호출되는 특별한 method
+
+[객체생성]
+classType variable = new Constructor();
+---------				 -------------
+사용할 class' type		class 안에 미리 정의되어있는 constructor method 호춯
+						특별한 method이지만 일반 method와 동일하게 실행당시 외부에서
+						data를 입력받아 사용하는 것이 가능.
+						
+- constructor는 일반 method와 다르게 객체가 생성될 떄 딱 하나 번만 호출되는 method
+- new 연산자가 생성자 method를 보고 메모리에 할당해야 하는 class가 무엇인지 파악하고 작업해야 하므로
+	constructor method를 정의할 때엔 규칙이 존재.
+- constructor는 주로 객체가 생성될 떄 처리해야 하는 기능을 처음 실생되어야 하는 logic을 정의할 목적으로 사용됨.
+	e.g. DB연결, network접속, OS와 통신해서 읽거나 써야할 파일 open하기 ...
+- 특별한 logic이 있는 경우눈 API에 포함된 class이며 사용자 정의로 만든 class에서 constructor의 역할은 주로 class의 field를 초기화하는 일 담당.
+
+[constructor 작성 규칙]
+1.	생성자의 이름은 클래스명과 대소문자까지 동일하게 정의.
+2.	생성자를 정의하는 경우 리턴타입은 명시하지 않는다.(void도 정의X)
+3.	생성자를 정의하지 않는 경우 compiler가 variable이 없는 constructor 제공. 이를 default constructor라 함.
+4.	class를 정의하며서 constructor를 개발자가 정의하면 compiler는 더이상 default constructor를 제공하지 않음.
+	그러나 framework를 사용하는 경우 default constructor를 내부에서 사용하므로, default constructor는 꼭 정의해야 함.
+5.	constructor도 method이므로 variable를 정의할 수 있다.
+6.	constructor method도 overloading을 지원.
+	constructor를 variable count, type, order 차이가 있으면 여러 개 정의 가능.
+7.	241p, constructor가 overloading되어 있으므로 constructor 안에서 다른 constructor를 호출 가능.
+	[문법]
+	this(호출하고싶은 constructor의 variable 개수와 타입에 맞게 값 정의)
+	-> constructor 호출문은 반드시 constructor의 첫 번째 문장에서 호출해야 함. 
