@@ -1,3 +1,5 @@
+package additionalHW.four;
+
 
 public class FactoryExample {
 	
@@ -32,7 +34,10 @@ public class FactoryExample {
 		
 		System.out.println("* " + mainFactory.getFactoryName() + " 공장의 하루 생산량과 파트너 공장 협력 시 추가 생산량은 다음과 같다.");
 		// TODO
-		System.out.println("--------------------------------------------------------------");
+		System.out.println("1. 하루 생산량 = "+mainFactory.makeProducts(mainFactorySkill)+"\n");
+		System.out.println("2. 파트너 공장 ["+mainFactory.getFactoryName()+"] 협력 시 추가 생산량 = "+partner.workTogether(partner)+"\n");
+		System.out.println("--------------------------------------------------------------\n");
+		
 	}
 
 }

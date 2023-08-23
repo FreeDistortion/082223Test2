@@ -1,3 +1,4 @@
+package additionalHW.two;
 
 public class Prob2 {
 	public static void main(String[] args) {
@@ -15,5 +16,22 @@ public class Prob2 {
 }
 
 class BankCustomer{
-	// 문제를 잘 읽고 구현하세요.
+	private String name;
+	private int currentMoney;
+	public BankCustomer(String name, int currentMoney) {
+		super();
+		this.name = name;
+		this.currentMoney = currentMoney;
+	}
+	
+	public int getCurrentMoney() {
+		return currentMoney;
+	}
+	public void withdraw(int money) {
+		if(currentMoney>=money) {
+			currentMoney-=money;
+		}else {
+			System.out.println("잔액이 부족하여 인출할 수 없습니다.");
+		}
+	}
 }
