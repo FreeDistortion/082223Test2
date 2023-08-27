@@ -1,5 +1,8 @@
 package additionalHW.one;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 public class Prob11 {
 	public static void main(String[] args) {
 		int num1 = 6, num2 = 15;
