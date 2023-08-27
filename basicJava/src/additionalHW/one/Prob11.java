@@ -1,4 +1,4 @@
-package additionalHW;
+package additionalHW.one;
 
 public class Prob11 {
 	public static void main(String[] args) {

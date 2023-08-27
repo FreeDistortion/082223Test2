@@ -1,4 +1,4 @@
-package additionalHW.one;
+package HW.oop;
 public class Prob10 {
 	public static void main(String[] args) {
 		int month = Integer.parseInt(args[0]);

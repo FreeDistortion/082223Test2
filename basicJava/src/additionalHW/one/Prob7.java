@@ -1,4 +1,4 @@
-package additionalHW;
+package additionalHW.one;
 
 public class Prob7 {
 	
