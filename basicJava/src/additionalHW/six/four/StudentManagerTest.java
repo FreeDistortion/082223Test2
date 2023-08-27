@@ -1,3 +1,6 @@
+package additionalHW.six.four;
+
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -27,6 +30,7 @@ public class StudentManagerTest {
 		ArrayList studentList = studentManager.search(grade);
 		Iterator iter = studentList.iterator();
 		while (iter.hasNext()) {
+			
 			student = (Student) iter.next();
 			System.out.println(student.getName() + ", " + student.getGrade());
 		} 

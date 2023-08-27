@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.swing.tree.ExpandVetoException;
 
 public class StudentManager {
 	private List studentList;
@@ -26,21 +25,35 @@ public class StudentManager {
 		/*
 		  학생이름(name)으로 학생 검색 
 		*/ 
-		Student st = new Student(name);
-		if(studentList.contains(st.getName())){
-			return st;
+
+		Student student=new Student(name);
+		Iterator<Student> it=studentList.iterator();
+		while(it.hasNext()) {
+			student= it.next();
+			if(student.getName().equals(name)) {
+				return student;
+			}
 		}
-		else {
-			return null;
-		}
-			
+		return student;
 	}
 
 	public ArrayList search(String grade) {
 	    /*
 		  점수 등급으로 학생 목록 검색 
 		*/  
+		ArrayList students= new ArrayList();
 		
+		Iterator<Student> it=studentList.iterator();
+		while(it.hasNext()) {
+			Student st = it.next();
+			if(st.getGrade().equals(grade))
+				students.add(st);
+//			if(students.contains(grade)) {
+//				
+//				return students;
+//			}
+		}
+		return students;
 	}
 	 
 }

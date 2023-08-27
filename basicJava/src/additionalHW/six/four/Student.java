@@ -31,26 +31,23 @@ public class Student {
 	
 	
 	
-	public void calcGrade() throws Exception {
+	public void calcGrade() {
 		/* 
 		  학생의 등급을 판단하는 메소드 구현
 	    */
-		int nMidScore=midScore*4/10;
-		int nEndScore=endScore*4/10;
-		int nTaskScore=taskScore*2/10;
-		int sum=nEndScore+nMidScore+nTaskScore;
-		if(sum<=100) {
-			this.grade="A";
-		}else if (sum<90) {
-			this.grade="B";
-		}else if (sum<80) {
-			this.grade="C";
+		int sum=((midScore*4)+(endScore*4)+(taskScore*2))/10;
+		if(sum<60&sum>=0) {
+			this.grade="F";
 		}else if (sum<70) {
 			this.grade="D";
-		}else if (sum<60&sum>=0) {
-			this.grade="F";
+		}else if (sum<80) {
+			this.grade="C";
+		}else if (sum<90) {
+			this.grade="B";
+		}else if (sum<=100) {
+			this.grade="A";
 		}else {
-			throw new Exception();
+			
 		}
 		
 	} 
