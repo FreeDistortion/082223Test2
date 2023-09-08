@@ -1,2 +1,2 @@
 # 082223Test2
-082223Test2Des
+things studied java and jdbc
