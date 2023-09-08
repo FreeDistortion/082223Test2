@@ -17,10 +17,17 @@ public class ShapeTest {
 		for (Shape shape : arrayList) {
 			System.out.println(shape.getClass().getSimpleName()+"\t"+shape.getLen()+"\t"+shape.point.getX()+"\t"+shape.point.getY()+"\t"+shape.getArea()+"\t"+shape.getCircumference());
 		}
-		
+			
 		//	모든 객체들에 move()함수를 이용하여 x가 10 증가, y 가 10 증가 되도록 변경한 후 객체 정보를 화면에 출력한다. - for문 이용
 		for (Shape shape : arrayList) {
+			if(shape instanceof Rectangle) {
+				((Rectangle) shape).move(shape.point.getX()+10, shape.point.getY()+10);
+			}else if (shape instanceof Circle) {
+				((Circle) shape).move(shape.point.getX()+10, shape.point.getY()+10);
+			}
 			
+			System.out.println(shape.getClass().getSimpleName()+"\t"+shape.getLen()+"\t"+shape.point.getX()+"\t"+shape.point.getY());
+
 		}
 	}
 }
